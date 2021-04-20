@@ -12,11 +12,14 @@ what happened and how much health the players have. When the health of the secon
 reaches 35 and less he heals. 
 ## How to use
 After launch, the user is prompted to enter a name, health level and damage range. If the user tries to enter a string instead of a number (health and damage level), then a request will appear to enter the data again. 
+
 ![image](https://user-images.githubusercontent.com/82833193/115395417-87f0ef80-a1ec-11eb-9803-177655953d05.png)
 
 The next step...
 There is a question after which the game will start or the project will end (you need to enter yes or no)
+
 ![image](https://user-images.githubusercontent.com/82833193/115395861-05b4fb00-a1ed-11eb-84da-bd15128304c0.png)
+
 After the fight begins
 Watch and enjoy
 
