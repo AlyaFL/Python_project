@@ -30,3 +30,5 @@ if input('Start the battle? \n YES \n NO \n -->> ').lower() == 'yes':
     if computer.health > 0 and computer.health < 35:
         computer.chance_heal = 0.31
         print('\n' + f"{computer.name}'s health has reached a critically low level. So he increased the likelihood of healing \n")
+else:
+    print("The game did not take place")
