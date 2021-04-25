@@ -1,4 +1,4 @@
-from random import randint
+from random import randint, choices
 from time import sleep
 
 class Sprite():
@@ -7,6 +7,8 @@ class Sprite():
         self.name = name #character name
         self.health = health #health level (default 100)
         self.attack = attack #damage level (default 10)
+        self.chance_heal = 0.3 
+        self.chance_attack = 0.3
 
     #character status message
     def print_info(self,enemy):
@@ -17,14 +19,15 @@ class Sprite():
 
     #one character strikes another character
     def strike(self, enemy):
-        attack = randint(1, 3)
+        #random selection with distribution
+        attack = choices([1, 2, 3], weights = [self.chance_attack, self.chance_attack, self.chance_heal])
         #do moderate damage
-        if attack == 1:
+        if attack == [1]:
             damage = randint(self.attack-5, self.attack+10)
             enemy.health -= damage
             print(self.name + ' attacks ' + enemy.name + ' with the force of the blow ' + str(damage) + '\n')
         #do heavy damage
-        elif attack == 2:
+        elif attack == [2]:
             damage = randint(self.attack-10, self.attack+30)
             enemy.health -= damage
             print(self.name + ' attacks ' + enemy.name + ' with the force of the blow ' + str(damage) + '\n')  
