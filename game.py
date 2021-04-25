@@ -28,5 +28,5 @@ if input('Start the battle? \n YES \n NO \n -->> ').lower() == 'yes':
     player.fight(computer)
     sleep(4)
     if computer.health > 0 and computer.health < 35:
-        computer.health += randint(5,17)
-        print('\n' + f"{computer.name}'s health has reached a critically low level. An urgent need to increase the level of health \n")
+        computer.chance_heal = 0.31
+        print('\n' + f"{computer.name}'s health has reached a critically low level. So he increased the likelihood of healing \n")
